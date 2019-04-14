@@ -1,0 +1,29 @@
+﻿<Window x:Class="Attendance_Tracker.HomeWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Attendance_Tracker"
+        mc:Ignorable="d"
+       Title="Attendance Tracker"  Background="Azure" Icon="icons/k.gif" >
+
+    <Grid Background="Azure">
+        <Grid HorizontalAlignment="Left"  Width="180"  Background="#018EFF">
+            <Button x:Name="attendancebt" Content="   Attendance" HorizontalAlignment="Left" Margin="0,178,0,0" VerticalAlignment="Top" Width="180" Height="55" Background="{x:Null}" FontSize="21.333" FontFamily="Century Gothic" Foreground="White" BorderBrush="{x:Null}" Click="Attendancebt_Click"/>
+            <Image x:Name="image" HorizontalAlignment="Left" Height="32" Margin="7,189,0,0" VerticalAlignment="Top" Width="31" Source="icons/checkbox2.png"/>
+            <Button x:Name="addbt" Click="Addbt_Click" Content="     Add group" HorizontalAlignment="Left" Margin="0,233,0,0" VerticalAlignment="Top" Width="180" Height="55" Background="{x:Null}" FontSize="21.333" FontFamily="Century Gothic" Foreground="White" BorderBrush="{x:Null}"/>
+            <Image x:Name="image_Copy" HorizontalAlignment="Left" Height="32" Margin="13,243,0,0" VerticalAlignment="Top" Width="31" Source="icons/Add User Group Man Man_40px.png"/>
+            <Button x:Name="searchbt" Content="Search" HorizontalAlignment="Left" Margin="0,292,0,0" VerticalAlignment="Top" Width="180" Height="55" Background="{x:Null}" FontSize="21.333" FontFamily="Century Gothic" Foreground="White" BorderBrush="{x:Null}" Click="Searchbt_Click"/>
+            <Image x:Name="image_Copy1" HorizontalAlignment="Left" Height="32" Margin="13,302,0,0" VerticalAlignment="Top" Width="31" Source="icons/search.png"/>
+            <Button x:Name="button_Copy2" Content="Logout" HorizontalAlignment="Left" Margin="0,351,0,0" VerticalAlignment="Top" Width="180" Height="55" Background="{x:Null}" FontSize="21.333" FontFamily="Century Gothic" Foreground="White" BorderBrush="{x:Null}" Click="Button_Copy2_Click"/>
+            <Image x:Name="image_Copy2" HorizontalAlignment="Left" Height="32" Margin="13,363,0,0" VerticalAlignment="Top" Width="31" Source="icons/shutdown.png"/>
+            <Image x:Name="image_Copy3" HorizontalAlignment="Left" Height="85" Margin="42,23,0,0" VerticalAlignment="Top" Width="90" Source="icons/k.gif"/>
+            <TextBlock x:Name="NametextBlock" HorizontalAlignment="Left" Margin="22,113,0,0" TextWrapping="Wrap" Text="Mr:****" VerticalAlignment="Top" Foreground="White" FontFamily="Monotype Corsiva" FontSize="26.667"/>
+            <TextBlock x:Name="textBlock_Copy" HorizontalAlignment="Left" Margin="53,140,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Foreground="White" FontFamily="Century Gothic" FontSize="16"/>
+
+        </Grid>
+        <Frame Name="fr"  NavigationUIVisibility="Hidden" Margin="180,0,0,0" RenderTransformOrigin="0.5,0.5" >
+            
+        </Frame>
+    </Grid>
+</Window>

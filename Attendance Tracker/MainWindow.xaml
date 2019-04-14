@@ -1,0 +1,92 @@
+﻿<Window x:Class="Attendance_Tracker.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Attendance_Tracker"
+
+                 xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+
+        mc:Ignorable="d"
+        Title="Attendance Tracker " Height="450" Width="800" Icon="icons/k.gif" WindowState="Maximized" >
+
+
+    <Window.Background>
+        <ImageBrush ImageSource="icons/KNURE.jpg"/>
+    </Window.Background>
+    <Border  Margin="204,40,204,40" CornerRadius="30">
+        <Grid Background="#018EFF" Opacity="0.9" Width="384" Height="350" Name="SignInGrid">
+            <Image x:Name="image_Copy3" HorizontalAlignment="Center" Height="100" Margin="142,12,142,0" VerticalAlignment="Top" Width="100" Source="icons/k.gif"/>
+
+            <Grid>
+                <TextBox x:Name="username"  Width="200"   materialDesign:HintAssist.Hint="User name" 
+  Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="100,118,84,191" 
+                  />
+
+                <Grid>
+                    <Grid >
+
+                    </Grid>
+                    <PasswordBox x:Name="password"  Width="200"   materialDesign:HintAssist.Hint="Password" 
+ Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" Margin="100,194,84,120" 
+                  />
+                    <!--  <TextBox  Text="heshmat" Width="200" Height="28"  VerticalAlignment="Center" HorizontalAlignment="Center" x:Name="password" Margin="92,183,92,139" Foreground="Black">
+                    </TextBox>
+                    <TextBlock  IsHitTestVisible="False" Text="Password" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="160,192,174,142" Foreground="DarkGray">
+                        <TextBlock.Style>
+                            <Style TargetType="{x:Type TextBlock}">
+                                <Setter Property="Visibility" Value="Collapsed"/>
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding Text, ElementName=password}" Value="">
+                                        <Setter Property="Visibility" Value="Visible"/>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </TextBlock.Style>
+                    </TextBlock>-->
+                </Grid>
+            </Grid>
+            <Image x:Name="image" HorizontalAlignment="center" Height="27" Margin="110,253,243,0" VerticalAlignment="Top" Width="31" Source="icons/login.png" RenderTransformOrigin="2.097,0.531"/>
+            <Button x:Name="signinbt" Click="SignIn"  Content="Sign in " HorizontalAlignment="Center" Margin="100,235,104,0" VerticalAlignment="Top" Width="180" Height="55" Background="{x:Null}" FontSize="21.333" FontFamily="Century Gothic" Foreground="AliceBlue" BorderBrush="{x:Null}">
+            </Button>
+            <Button x:Name="signupb" Click="Signupb_Click" Content="Sign up " HorizontalAlignment="Center" Margin="100,280,104,0" VerticalAlignment="Top" Width="180" Height="55" Background="{x:Null}" FontSize="21.333" FontFamily="Century Gothic" Foreground="White" BorderBrush="{x:Null}">
+            </Button>
+            <Image x:Name="signupimg" HorizontalAlignment="center" Height="30" Margin="110,295,243,0" VerticalAlignment="Top" Width="31" Source="icons/plus.png" RenderTransformOrigin="2.097,0.531"/>
+
+            <Grid x:Name="signupBoard" Background="#018EFF"  Visibility="Hidden" >
+
+                <TextBox x:Name="SignUpNametb"  Width="200" Height="60"   materialDesign:HintAssist.Hint="User name" 
+  Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="100,58,84,232" 
+                  />
+                <TextBox x:Name="SignUpEmail"  Width="200"   materialDesign:HintAssist.Hint="Email" 
+  Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="100,123,84,191" 
+                  />
+
+                <PasswordBox x:Name="signUpPassword"  Width="200"   materialDesign:HintAssist.Hint="Password" 
+ Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" Margin="100,164,84,150" 
+                  />
+                <PasswordBox x:Name="confirmPassword"  Width="200"   materialDesign:HintAssist.Hint="Confirm Password" 
+  Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" Margin="100,205,84,109" 
+                  />
+
+                <Button x:Name="submitsignupb" Click="Submitsignupb_Click" Content="Sign up " HorizontalAlignment="Center" Margin="100,249,104,0" VerticalAlignment="Top" Width="180" Height="55" Background="{x:Null}" FontSize="21.333" FontFamily="Century Gothic" Foreground="White" BorderBrush="{x:Null}">
+                </Button>
+
+                <Button Name="backToSignIn_bt" Height="Auto" Margin="0,0,309,292" RenderTransformOrigin="2.097,0.531" Click="BackToSignIn_bt_Click">
+                    <Button.Template>
+                        <ControlTemplate>
+                            <Image Source="icons/back.png"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+
+
+            </Grid>
+
+        </Grid>
+
+
+    </Border>
+
+</Window>
