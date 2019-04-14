@@ -1,5 +1,5 @@
 # AttendanceTracker
-## used to check attendance of students.
+## it can be used to check attendance of students.
 ### screenshots
 
 #### Main window
